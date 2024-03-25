@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../componants/Header";
-import SideImage from "../componants/SideImage";
-import Formualire from "../componants/Formualire";
+import HeadAssurance from "../component/HeadAssurance";
+import SideImage from "../component/SideImage";
+import FormAssurance from "../component/FormAssurance";
 
 const Assurance = () => {
   return (
@@ -17,10 +17,10 @@ const Assurance = () => {
           color: "#3385ff",
         }}
       >
-        <Header />
+        <HeadAssurance />
         <hr />
       </div>
-      <Formualire />
+      <FormAssurance />
     </div>
   );
 };

@@ -16,8 +16,8 @@ import { useSelector } from "react-redux";
 
 import * as XLSX from "xlsx";
 
-import Leadscomponants from "../componants/Leadscomponants";
-import HeaderLeads from "../componants/HeaderLeads";
+import LeadList from "../component/LeadList";
+import HeadListLeads from "../component/HeadListLeads";
 
 const initialData = [
   // Données initiales
@@ -26,7 +26,6 @@ const initialData = [
 const App = () => {
   const dataleads = useSelector((state) => state.leads.data);
   console.log(dataleads);
-
 
   const [filter, setFilter] = useState("");
 
@@ -55,7 +54,10 @@ const App = () => {
       />
 
       <TableContainer component={Paper}>
-       <HeaderLeads filteredData={filteredData} />
+        <Table>
+          <HeadListLeads />
+          <LeadList filteredData={filteredData} />
+        </Table>
       </TableContainer>
       <Button variant="contained" color="primary" onClick={handleDownload}>
         Télécharger en Excel
